@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
-import { useSprings, animated, SpringConfig } from '@react-spring/web';
+import { useSprings, animated, SpringConfig, AnimatedProps } from '@react-spring/web';
 
 type BlurTextProps = {
     text?: string;
@@ -89,7 +89,7 @@ const BlurText: React.FC<BlurTextProps> = ({
             {springs.map((props, index) => (
                 <animated.span
                     key={index}
-                    style={props}
+                    style={props as AnimatedProps<React.CSSProperties>} // Explicit cast here
                     className="inline-block text-6xl transition-transform will-change-[transform,filter,opacity]"
                 >
                     {elements[index] === ' ' ? '\u00A0' : elements[index]}
