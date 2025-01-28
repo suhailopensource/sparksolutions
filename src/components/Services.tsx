@@ -1,5 +1,6 @@
 import React from 'react';
 import { Code, Globe, Database, Smartphone, Cloud, Shield } from 'lucide-react';
+import SpotlightCard from './SpotlightCard';
 
 const services = [
   {
@@ -36,17 +37,28 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24">
+    <section id="services" className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Services</h2>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
+          <br></br>
+          <br></br>
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Our Services</h2>
+          <p className="mt-4 text-lg leading-8 text-gray-400">
             Comprehensive technology solutions for your business needs
           </p>
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
+            <SpotlightCard key={index} className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
+              <div className='text-white'>{service.icon}</div>
+              <br></br>
+              <h2 className='text-white'>{service.title}</h2>
+              <p className='text-white'>{service.description}</p>
+
+            </SpotlightCard>
+          ))}
+          {/* {services.map((service, index) => (
             <div
               key={index}
               className="relative group rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 hover:shadow-lg hover:ring-blue-600 transition-all duration-200"
@@ -59,7 +71,7 @@ export default function Services() {
               </div>
               <p className="mt-4 text-gray-600">{service.description}</p>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </section>

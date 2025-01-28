@@ -3,24 +3,19 @@ import { Target, Users, Lightbulb } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-gray-50 flex flex-col gap-y-20">
+    <section id="about" className="py-24 bg-black flex flex-col gap-y-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">About Us</h2>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
-            Empowering businesses through innovative technology solutions since 2020
+          <br></br>
+          <br></br>
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">About Us</h2>
+          <p className="mt-4 text-lg leading-8 text-gray-300">
+            Empowering businesses through innovative technology solutions
           </p>
         </div>
         <div className='text-center flex flex-col' >
           <div className='font-bold text-2xl text-blue-600'>Since 2022</div>
-          <div className='justify-center items-center flex gap-x-10'>
-            <div className='font-bold text-xl'>
-              25+ Clients
-            </div>
-            <div className='font-bold text-xl'>
-              100+ Students
-            </div>
-          </div>
+
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-3">
@@ -28,8 +23,8 @@ export default function About() {
             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-600">
               <Target className="h-8 w-8 text-white" />
             </div>
-            <h3 className="mt-6 text-xl font-semibold text-gray-900">Our Mission</h3>
-            <p className="mt-2 text-center text-gray-600">
+            <h3 className="mt-6 text-xl font-semibold text-white">Our Mission</h3>
+            <p className="mt-2 text-center text-white">
               To deliver cutting-edge software solutions that simplify lives, boost productivity, and foster learning in the ever-evolving digital landscape
             </p>
           </div>
@@ -38,8 +33,8 @@ export default function About() {
             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-600">
               <Lightbulb className="h-8 w-8 text-white" />
             </div>
-            <h3 className="mt-6 text-xl font-semibold text-gray-900">Our Vision</h3>
-            <p className="mt-2 text-center text-gray-600">
+            <h3 className="mt-6 text-xl font-semibold text-white">Our Vision</h3>
+            <p className="mt-2 text-center text-white">
               To be the leading technology partner for businesses embracing digital innovation.
             </p>
           </div>
@@ -48,8 +43,8 @@ export default function About() {
             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-600">
               <Users className="h-8 w-8 text-white" />
             </div>
-            <h3 className="mt-6 text-xl font-semibold text-gray-900">Our Team</h3>
-            <p className="mt-2 text-center text-gray-600">
+            <h3 className="mt-6 text-xl font-semibold text-white">Our Team</h3>
+            <p className="mt-2 text-center text-white">
               A dedicated team of experts committed to delivering excellence in every project.
             </p>
           </div>
@@ -57,11 +52,14 @@ export default function About() {
       </div>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">MEET THE FOUNDERS</h2>
-          <p className="mt-4 text-lg leading-8 text-gray-600 text-justify ">
-            Spark Solutions is the brainchild of three visionary entrepreneurs – Anish Kumar.S, Syed Mustafa, and Syed Suhail Ahmed. Founded in 2022, their mission was to create a company that provides innovative software solutions while empowering education through technology. Their journey began as students, driven by a shared passion for solving real-world problems with creativity and technical expertise.
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">MEET THE FOUNDERS</h2>
+          <p className="mt-4 text-lg leading-8 text-gray-300 text-justify ">
+            Spark Solutions was founded in 2022 by three visionary entrepreneurs: Anish Kumar.S, Syed Mustafa, and Syed Suhail Ahmed. Their mission is to deliver innovative software solutions while advancing education through technology. Starting as students united by a passion for solving real-world problems, they combined creativity and technical expertise to bring their vision to life.
 
-            Each founder brings a unique skill set to the table, ensuring a perfect balance of innovation, leadership, and strategic thinking. Anish Kumar.S focuses on cutting-edge technology and problem-solving, Syed Mustafa drives operational excellence, and Syed Suhail Ahmed champions creative solutions and visionary planning. Together, they lead Spark Solutions with a commitment to excellence, shaping a future where technology and education empower communities to thrive.
+
+          </p>
+          <p className="mt-4 text-lg leading-8 text-gray-300 text-justify ">
+            Anish Kumar.S specializes in cutting-edge technology, Syed Mustafa ensures operational excellence, and Syed Suhail Ahmed leads with creative solutions and strategic vision. Together, they drive Spark Solutions toward a future where technology empowers communities and transforms education for a brighter tomorrow.
           </p>
         </div>
       </div>

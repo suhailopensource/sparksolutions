@@ -15,11 +15,12 @@ export default function Navbar() {
   const location = useLocation();
 
   return (
-    <header className="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+    <header className="fixed w-full bg-transparent backdrop-blur-sm z-50 shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link to="/" className="-m-1.5 p-1.5 text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
-            SPARK SOLUTIONS
+          {/* <Link to="/" className="-m-1.5 p-1.5 text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors"> */}
+          <Link to="/" className="-m-1.5 text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+            <img className='h-28 w-28' src='https://res.cloudinary.com/dhijs4dq0/image/upload/v1737899931/WhatsApp_Image_2025-01-26_at_7.11.36_PM-removebg-preview_pxaij7.png' />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -38,7 +39,7 @@ export default function Navbar() {
               to={item.href}
               className={`text-sm font-semibold leading-6 transition-all duration-200 ${location.pathname === item.href
                 ? 'text-blue-600'
-                : 'text-gray-900 hover:text-blue-600 hover:scale-105'
+                : 'text-white hover:text-blue-600 hover:scale-105'
                 }`}
             >
               {item.name}
@@ -48,7 +49,7 @@ export default function Navbar() {
       </nav>
       {/* Mobile menu */}
       <div className={`lg:hidden ${mobileMenuOpen ? 'fixed inset-0 z-50' : 'hidden'}`}>
-        <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-600 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link to="/" className="-m-1.5 p-1.5 text-2xl font-bold text-blue-600" onClick={() => setMobileMenuOpen(false)}>
               SPARK SOLUTIONS
@@ -70,7 +71,7 @@ export default function Navbar() {
                     to={item.href}
                     className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition-all duration-200 ${location.pathname === item.href
                       ? 'bg-blue-50 text-blue-600'
-                      : 'text-gray-900 hover:bg-gray-50'
+                      : 'text-white hover:bg-gray-50'
                       }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >

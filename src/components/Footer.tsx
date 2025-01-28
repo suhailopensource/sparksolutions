@@ -11,6 +11,7 @@ export default function Footer() {
             <h3 className="text-xl font-bold text-white">SPARK SOLUTIONS</h3>
             <p className="mt-4 text-gray-400">
               Transforming businesses through innovative technology solutions.
+
             </p>
           </div>
 
@@ -53,20 +54,20 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400">Connect With Us</h4>
             <div className="mt-4 flex space-x-4">
               {[
-
-
                 { icon: <Linkedin className="h-5 w-5" />, href: 'https://www.linkedin.com/company/sparkservice/?viewAsMember=true' },
                 { icon: <Instagram className="h-5 w-5" />, href: 'https://www.instagram.com/spark.solutions.24?igsh=eWQ4ajBsOGx3YzI5' },
               ].map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
+                  target='_blank'
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   {social.icon}
                 </a>
               ))}
             </div>
+            <div>   <span className='text-blue-400 text-xl mt-4'>MSME Registered Company.</span></div>
           </div>
         </div>
 
