@@ -53,7 +53,7 @@ export default function Ventures() {
           </a>
 
 
-          {/* SPARK Education */}
+
           <a href='https://sparkeducation.vercel.app/' target='_blank'>
             <PixelCard variant='pink'>
 
