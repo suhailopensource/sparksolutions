@@ -1,15 +1,14 @@
-import { useState } from 'react';
-import { Menu } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
-
-import "../index.css"
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import "../index.css";
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Ventures', href: '/ventures' },
-  { name: 'Contact', href: '/contact' },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Ventures", href: "/ventures" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -17,31 +16,29 @@ export default function Navbar() {
   const location = useLocation();
 
   return (
-    <header className="fixed w-full bg-transparent backdrop-blur-sm z-50 shadow-sm">
-      <nav className="hidden md:flex mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
-          {/* <Link to="/" className="-m-1.5 p-1.5 text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors"> */}
-          <Link to="/" className="-m-1.5 text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
-            <img className='h-28 w-28' src='https://res.cloudinary.com/dhijs4dq0/image/upload/v1737899931/WhatsApp_Image_2025-01-26_at_7.11.36_PM-removebg-preview_pxaij7.png' />
+    <header className="fixed w-full bg-transparent backdrop-blur-md z-50 shadow-md">
+      {/* Desktop Navigation */}
+      <nav className="hidden md:flex mx-auto max-w-7xl items-center justify-between p-4 lg:px-8">
+        {/* Logo */}
+        <div className="flex">
+          <Link to="/" className="-m-1.5">
+            <img
+              className=" md:h-28 md:w-28 object-contain"
+              src="https://res.cloudinary.com/dhijs4dq0/image/upload/v1737899931/WhatsApp_Image_2025-01-26_at_7.11.36_PM-removebg-preview_pxaij7.png"
+              alt="Spark Logo"
+            />
           </Link>
         </div>
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <Menu className="h-6 w-6" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="hidden md:flex lg:gap-x-12">
+
+        {/* Menu Items */}
+        <div className="hidden md:flex space-x-8">
           {navigation.map((item) => (
             <Link
               key={item.name}
               to={item.href}
-              className={`text-sm font-semibold leading-6 transition-all duration-200 ${location.pathname === item.href
-                ? 'text-blue-600'
-                : 'text-white hover:text-blue-600 hover:scale-105'
+              className={`text-sm font-semibold transition-all duration-200 ${location.pathname === item.href
+                ? "text-blue-600"
+                : "text-white hover:text-blue-600 hover:scale-105"
                 }`}
             >
               {item.name}
@@ -49,34 +46,45 @@ export default function Navbar() {
           ))}
         </div>
       </nav>
-      {/* Mobile menu */}
-      {
 
+      {/* Mobile Navigation */}
+      <div className="md:hidden flex items-center justify-between p-4">
+        {/* Logo */}
+        <Link to="/">
+          <img
+            className="h-20 w-20 object-contain"
+            src="https://res.cloudinary.com/dhijs4dq0/image/upload/v1737899931/WhatsApp_Image_2025-01-26_at_7.11.36_PM-removebg-preview_pxaij7.png"
+            alt="Spark Logo"
+          />
+        </Link>
 
-        <div className=' flex md:hidden'>
+        {/* Mobile Menu Button */}
+        <button
+          className="p-2 rounded-md text-white"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </div>
 
-          <div className="hamburger-menu" onClick={() => { setMobileMenuOpen(true) }}>
-            <input id="menu__toggle" type="checkbox" />
-            <label className="menu__btn" htmlFor="menu__toggle">
-              <span></span>
-            </label>
-            {
-              mobileMenuOpen &&
-              <ul className="menu__box">
-                {
-                  navigation.map((item) => (
-
-                    <li key={item.name}
-                    ><Link className="menu__item" to={item.href}>{item.name}</Link></li>
-                  ))
-                }
-
-
-              </ul>
-            }
-          </div>
+      {/* Mobile Menu Dropdown */}
+      {mobileMenuOpen && (
+        <div className="md:hidden absolute top-20 left-0 w-full bg-slate-800  shadow-md">
+          <ul className="flex flex-col items-center space-y-4 py-4">
+            {navigation.map((item) => (
+              <li key={item.name}>
+                <Link
+                  to={item.href}
+                  className="text-white text-lg font-medium hover:text-blue-600"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      }
+      )}
     </header>
   );
 }
