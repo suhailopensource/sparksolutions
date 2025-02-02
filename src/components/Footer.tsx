@@ -1,5 +1,5 @@
-import React from 'react';
-import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+
+import { Linkedin, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -67,7 +67,12 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <div>   <span className='text-blue-400 text-xl mt-4'>MSME Registered Company.</span></div>
+            <div>
+              <span className='text-blue-400 text-xl mt-4'>MSME Registered Company.</span>
+              <br>
+              </br>
+              <span className='text-blue-400 text-xl mt-4'>UDYAM-TN-02-0340730</span>
+            </div>
           </div>
         </div>
 

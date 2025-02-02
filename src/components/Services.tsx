@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Code, Globe, Database, Smartphone, Cloud, Shield } from 'lucide-react';
 import SpotlightCard from './SpotlightCard';
 
@@ -51,9 +51,13 @@ export default function Services() {
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <SpotlightCard key={index} className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
-              <div className='text-white'>{service.icon}</div>
+              <div className='flex gap-2'>
+
+                <div className='text-white'>{service.icon}</div>
+
+                <div><h2 className='text-white'>{service.title}</h2></div>
+              </div>
               <br></br>
-              <h2 className='text-white'>{service.title}</h2>
               <p className='text-white'>{service.description}</p>
 
             </SpotlightCard>

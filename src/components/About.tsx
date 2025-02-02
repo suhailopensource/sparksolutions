@@ -52,15 +52,23 @@ export default function About() {
       </div>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">MEET THE FOUNDERS</h2>
-          <p className="mt-4 text-lg leading-8 text-gray-300 text-justify ">
-            Spark Solutions was founded in 2022 by three visionary entrepreneurs: Anish Kumar.S, Syed Mustafa, and Syed Suhail Ahmed. Their mission is to deliver innovative software solutions while advancing education through technology. Starting as students united by a passion for solving real-world problems, they combined creativity and technical expertise to bring their vision to life.
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-2">MEET THE FOUNDERS</h2>
+          <div className='flex flex-wrap'>
+            <div className='md:w-[50%]'>
 
+              <p className="mt-7 text-lg leading-8 text-gray-300 text-justify ">
+                Spark Solutions was founded in 2022 by three visionary entrepreneurs: Anish Kumar.S, Syed Mustafa, and Syed Suhail Ahmed. Their mission is to deliver innovative software solutions while advancing education through technology. Starting as students united by a passion for solving real-world problems, they combined creativity and technical expertise to bring their vision to life.
+                Anish Kumar.S specializes in cutting-edge technology, Syed Mustafa ensures operational excellence, and Syed Suhail Ahmed leads with creative solutions and strategic vision. Together, they drive Spark Solutions toward a future where technology empowers communities and transforms education for a brighter tomorrow.
 
-          </p>
-          <p className="mt-4 text-lg leading-8 text-gray-300 text-justify ">
+              </p>
+            </div>
+            <div className='w-[50%] md:flex hidden' >
+              <img alt="Founders" src='https://res.cloudinary.com/dhijs4dq0/image/upload/v1738481058/WhatsApp_Image_2025-02-02_at_12.43.48_PM_xu2ng9.jpg'></img>
+            </div>
+          </div>
+          {/* <p className="mt-4 text-lg leading-8 text-gray-300 text-justify ">
             Anish Kumar.S specializes in cutting-edge technology, Syed Mustafa ensures operational excellence, and Syed Suhail Ahmed leads with creative solutions and strategic vision. Together, they drive Spark Solutions toward a future where technology empowers communities and transforms education for a brighter tomorrow.
-          </p>
+          </p> */}
         </div>
       </div>
     </section>
