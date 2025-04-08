@@ -1,5 +1,6 @@
 
 import { Linkedin, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -21,9 +22,9 @@ export default function Footer() {
             <ul className="mt-4 space-y-2">
               {['Home', 'About', 'Services', 'Contact'].map((item) => (
                 <li key={item}>
-                  <a href={item === "Home" ? '/' : `/${item.toLowerCase().replace(' ', '')}`} className="text-gray-400 hover:text-white">
+                  <Link to={item === "Home" ? '/' : `/${item.toLowerCase().replace(' ', '')}`} className="text-gray-400 hover:text-white">
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
